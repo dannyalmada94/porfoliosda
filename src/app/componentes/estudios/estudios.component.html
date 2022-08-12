@@ -1,0 +1,13 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Educación
+    </h2>
+    <ul class="list-group" *ngFor="let educacion of miEducacion">
+      <a class="list-group-item list-group-item-action" aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{educacion.titulo}}</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">{{educacion.tipo_educacion}}</p>
+        <small>{{educacion.descripcion}}</small>
+      </a>
+    </ul>

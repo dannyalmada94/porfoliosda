@@ -1,0 +1,10 @@
+<div id="disenobox" class="row">
+  <h2 id="disenotitulo">Experiencia 
+    <button type="button" class="btn btn-secondary" (click)="addExperiencia()">Agregar experiencia</button>
+  </h2>
+  <app-experiencia-items
+  *ngFor="let experiencia of miExperiencia"
+  [experiencia]="experiencia"
+  (borrarExperienciaPass)="borrarExperiencia(experiencia)">
+  </app-experiencia-items>
+</div>

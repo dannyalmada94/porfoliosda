@@ -1,0 +1,43 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Experiencia
+        <button type="button" class="btn btn-secondary" (click)="backPorfolio()">Volver</button>
+    </h2>
+<div>
+    <form class="form-control" (ngSubmit)="guardarExperiencia()">
+    <div class="input-group">
+    <span class="input-group-text">Modalidad</span>
+    <textarea 
+    class="form-control" 
+    aria-label="With textarea" 
+    placeholder="Monotributista, relación de dependencia, Full Time, pasantía, etc."
+    type="text"
+    name="text"
+    id="modalidad"
+    [(ngModel)]="modalidad"></textarea>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Empresa</span>
+        <textarea 
+        class="form-control" 
+        aria-label="With textarea" 
+        placeholder="Nombre o razón social de la empresa para la que te desempeñaste"
+        type="text"
+        name="nombre_empresa"
+        id="nombre_empresa"
+        [(ngModel)]="nombre_empresa"></textarea>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Descripcion</span>
+        <textarea 
+        class="form-control" 
+        aria-label="With textarea" 
+        placeholder="Describe las actividades que realizaste, funciones, el puesto, fecha de inicio y final, etc"
+        type="text"
+        name="descripcion"
+        id="descripcion"
+        [(ngModel)]="descripcion"></textarea>
+    </div>
+    <input type="submit" value="Guardar experiencia" class="input-group" class="btn btn-warning">
+</form>
+</div>
+</div>

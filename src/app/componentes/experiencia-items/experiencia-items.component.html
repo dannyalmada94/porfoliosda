@@ -1,0 +1,17 @@
+<div>
+    <h3>
+        {{experiencia.nombre_empresa}}
+        <button type="button" class="btn btn-primary" (click)="editExperiencia()">
+            Editar
+        </button>
+        <i class="bi bi-x"
+        (click)="borrarExperiencia(experiencia)">
+        </i>   
+    </h3>
+    <p>
+        <strong>{{experiencia.modalidad}}</strong>
+    </p>
+    <p>
+        {{experiencia.descripcion}}
+    </p>   
+</div>

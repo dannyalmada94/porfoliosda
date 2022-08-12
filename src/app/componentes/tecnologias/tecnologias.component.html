@@ -1,0 +1,10 @@
+<div id="disenobox" class="row">
+      <h2 id="disenotitulo">Tecnologias
+      </h2>
+      <div class="card border-success mb-3" style="max-width: 18rem;" *ngFor="let tecnologia of miTecnologia">
+        <div class="card-header">{{tecnologia.lenguaje_framework}}</div>
+        <div class="card-body text-success">
+          <p class="card-text">{{tecnologia.descripcion}}</p>
+        </div>
+      </div>
+</div>

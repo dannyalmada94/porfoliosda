@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+#login {
+    text-align: center;
+}
+
+#titulo {
+    border-style: solid;
+    padding-top: 130px;
+    margin-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 0px;
+}
+
+#botonedit {
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+
+#header {
+    background-color: coral;
+    padding: 1px;
+    margin-right: 1px;
+    margin-left: 1px;
+    border-style: solid;
+    border-color: blue;
+    border-top: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#carrucel {
+    margin-right: 1px;
+    margin-left: 1px;
+    max-height: 500px;
+    overflow: hidden;
+}
+.col-sm-5 {
+    text-align: right;
+}
+
+#carrucelinner {
+    margin-right: 1px;
+    margin-left: 1px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#perfilimg {
+    height: 250px;
+    width: 250px;
+    border-style: solid;
+    border-color: lawngreen;
+    border-width: 5px;
+}
+
+#disenobox {
+    border-style: solid;
+    border-color: gray;
+    border-width: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 1px;
+    margin-left: 1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#disenotitulo {
+    background-color: aqua;
+    border-style: solid;
+    border-color: gray;
+    border-bottom-width: 2px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+#disenocolumna {
+    border-style: solid;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-color: grey;
+}
+
+.formsend {
+    margin-left: 50%;
+}
+
+.boton-form {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    margin-left: 50%;
+}
