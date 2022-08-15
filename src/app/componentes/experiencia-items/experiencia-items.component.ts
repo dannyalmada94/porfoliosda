@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ExperienciaI } from 'src/app/Experiencia';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DatabaseService } from 'src/app/servicios/database.service';
 
 @Component({
   selector: 'app-experiencia-items',
@@ -10,7 +11,9 @@ import { Router } from '@angular/router';
 export class ExperienciaItemsComponent implements OnInit {
   @Input() experiencia:any
   @Output() borrarExperienciaPass:EventEmitter<ExperienciaI> = new EventEmitter();
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+              private databaseservice:DatabaseService,
+              private activatedroute:ActivatedRoute ) { }
 
   ngOnInit(): void {
   }
@@ -19,8 +22,7 @@ export class ExperienciaItemsComponent implements OnInit {
     this.borrarExperienciaPass.emit(experiencia);
   }
 
-  editExperiencia() {
-    this.router.navigate(['porfolio/experienciaedit']);
+  editExperiencia(id_experiencia:any) {
+    this.router.navigate(['porfolio/experienciaedit', id_experiencia]);
   }
-
 }

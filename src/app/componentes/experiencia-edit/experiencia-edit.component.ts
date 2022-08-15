@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExperienciaI } from 'src/app/Experiencia';
 
 @Component({
   selector: 'app-experiencia-edit',

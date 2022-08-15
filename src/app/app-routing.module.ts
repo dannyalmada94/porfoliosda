@@ -20,7 +20,7 @@ const routes: Routes = [
     ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
-    path: 'porfolio/experienciaedit',
+    path: 'porfolio/experienciaedit/:id_experiencia',
     component: ExperienciaEditComponent,
     ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },

@@ -1,6 +1,6 @@
 export interface ExperienciaI {
-    id_experiencia?: Number;
-    modalidad: String;
-    nombre_empresa: String;
-    descripcion: String;
+    id_experiencia?: number;
+    modalidad: string;
+    nombre_empresa: string;
+    descripcion: string
 }

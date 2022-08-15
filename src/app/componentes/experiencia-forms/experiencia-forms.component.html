@@ -2,4 +2,22 @@
     <h2 id="disenotitulo">Experiencia
         <button type="button" class="btn btn-primary" (click)="backPorfolio()">Volver</button>
     </h2>
+    <div class="container">
+        <form [formGroup]="editarExpForm" (ngSubmit)="formularioEditarExp(editarExpForm.value)">
+            <div class="form-group">
+                 <label for="exampleFormControlInput1">Modalidad</label>
+                 <input type="text" id="modalidad" class="form-control" formControlName="modalidad" placeholder="Modalidad de empleo">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nombre de la empresa</label>
+                <input type="text" id="nombre_empresa" class="form-control" formControlName="nombre_empresa" placeholder="Nombre de la empresa para la que te desempeñaste">
+           </div>
+           <div class="form-group">
+                <label for="exampleFormControlInput1">Descripcion</label>
+                <input type="text" id="descripcion" class="form-control" formControlName="descripcion" placeholder="Describe las funciones que desempeñabas, tambien las fechas">
+           </div>
+           <br><br>
+           <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </form>
+    </div>
 </div>

@@ -28,6 +28,7 @@ export class ExperienciaComponent implements OnInit {
 
   addExperiencia(){
     this.router.navigate(['porfolio/experienciasave']);
+    
   }
 
   }
