@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { EstudiosI } from '../EstudiosI';
 import { ExperienciaI } from '../Experiencia';
 import { HabilidadI } from '../HabilidadI';
+import { TecnologiasI } from '../TecnologiasI';
 
 const httpOptions = {
   headers: new HttpHeaders ({
@@ -27,6 +28,8 @@ export class DatabaseService {
   obtenerDatosPersona(): Observable<any> {
     return this.http.get<any>(this.apiUrl)
 }
+
+//Métodos correspondientes al componente "Proyectos"
 
 obtenerDatosProyecto(): Observable<any[]> {
   return this.http.get<any[]>(this.urlDos)
@@ -103,8 +106,18 @@ obtenerExperiencia(id_experiencia:any): Observable<ExperienciaI> {
   return this.http.get<ExperienciaI>(url);
 }
 
+//Métodos correrspondientes al componente "Tecnologias"
 obtenerDatosTecnologia(): Observable<any[]> {
   return this.http.get<any[]>(this.urlSeis)
+}
+
+borrarTecnologia(tecnologia:TecnologiasI): Observable<TecnologiasI[]> {
+  const url = `http://localhost:8080/tecnologias/borrar/${tecnologia.id_tecnologias}`
+  return this.http.delete<TecnologiasI[]>(url);
+}
+
+agregarTecnologiaDB(tecnologia:TecnologiasI): Observable<TecnologiasI> {
+  return this.http.post<TecnologiasI>(this.urlSeis, tecnologia, httpOptions)
 }
 
 

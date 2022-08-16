@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/servicios/database.service';
+import { TecnologiasI } from 'src/app/TecnologiasI';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tecnologias',
@@ -7,9 +9,10 @@ import { DatabaseService } from 'src/app/servicios/database.service';
   styleUrls: ['./tecnologias.component.css']
 })
 export class TecnologiasComponent implements OnInit {
-  miTecnologia:any
+  miTecnologia:TecnologiasI[] = [];
 
-  constructor(private serviciodatabase:DatabaseService) { }
+  constructor(private serviciodatabase:DatabaseService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.mostrarDatos();
@@ -22,5 +25,15 @@ export class TecnologiasComponent implements OnInit {
     })
 
   }
- 
+
+  eliminarTecnologia(tecnologia:TecnologiasI) {
+    this.serviciodatabase.borrarTecnologia(tecnologia).subscribe(() => {
+      this.miTecnologia = this.miTecnologia.filter(t => t.id_tecnologias !== tecnologia.id_tecnologias)
+    });
+  }
+
+  addTech() {
+    this.router.navigate(['/porfolio/tecnologiasave']);
+  }
+  
 }

@@ -1,0 +1,33 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Tecnologias
+    </h2>
+    <div class="container">
+        <form (ngSubmit)="guardarTecnologia()">
+            <div class="form-floating mb-3">
+                <input 
+                type="text"
+                name="lenguaje_framework"
+                id="lenguaje_framework" 
+                class="form-control"
+                [(ngModel)]="lenguaje_framework"
+                id="floatingInput" 
+                placeholder="Nombre de la tecnología">
+                <label for="floatingInput">Tecnologia</label>
+            </div>
+            <div class="form-floating">
+                <textarea
+                type="text"
+                name="descripcion"
+                id="descripcion"
+                class="form-control"
+                [(ngModel)]="descripcion"
+                placeholder="Describe como utilizaste esta tecnología y sus utilidades" 
+                id="floatingTextarea2" 
+                style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Descripción</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-warning">Guardar Tecnología</button>
+        </form>
+    </div>
+</div>

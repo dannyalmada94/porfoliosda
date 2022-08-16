@@ -35,6 +35,9 @@ import { HabilidadesNewComponent } from './componentes/habilidades-new/habilidad
 import { HabilidadesSaveComponent } from './componentes/habilidades-save/habilidades-save.component';
 import { HabilidadesEditComponent } from './componentes/habilidades-edit/habilidades-edit.component';
 import { HabilidadesFormComponent } from './componentes/habilidades-form/habilidades-form.component';
+import { TecnologiasItemsComponent } from './componentes/tecnologias-items/tecnologias-items.component';
+import { TecnologiasNewComponent } from './componentes/tecnologias-new/tecnologias-new.component';
+import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnologias-save.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { HabilidadesFormComponent } from './componentes/habilidades-form/habilid
     HabilidadesNewComponent,
     HabilidadesSaveComponent,
     HabilidadesEditComponent,
-    HabilidadesFormComponent
+    HabilidadesFormComponent,
+    TecnologiasItemsComponent,
+    TecnologiasNewComponent,
+    TecnologiasSaveComponent
   ],
   imports: [
     BrowserModule,
