@@ -1,0 +1,39 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Habilidades
+    <button class="btn btn-secondary" (click)="backPorfolio()">
+        Volver
+    </button>
+    </h2>
+    <div class="container">
+        <form (ngSubmit)="guardarHabilidad()">
+        <div class="card">
+            <h5 class="card-header">Rellena los campos solicitados</h5>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Habilidad</label>
+                    <input class="form-control form-control-sm"
+                     type="text"
+                     name="tipo_habilidad"
+                     id="tipo_habilidad" 
+                     [(ngModel)]="tipo_habilidad"
+                     placeholder="Nombre de la habilidad" 
+                     aria-label=".form-control-sm example"
+                     >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                    <input 
+                    class="form-control form-control-lg" 
+                    type="text"
+                    name="descripcion"
+                    id="descripcion"
+                    [(ngModel)]="descripcion"
+                    placeholder="Describe las capacidades de dicha habilidad" 
+                    aria-label=".form-control-lg example">
+                </div>
+              <button class="btn btn-warning" type="submit">Guardar Habilidad</button>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>

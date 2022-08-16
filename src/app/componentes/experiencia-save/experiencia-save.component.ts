@@ -17,6 +17,8 @@ export class ExperienciaSaveComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Recibo desde el componente hijo y envío la experiencia al método en el servicio, y una vez enviado
+  //redirige al componente principal para que aparezca en la lista
   agregarNuevaExperiencia(experiencia:ExperienciaI) {
     this.serviciodatabase.agregarExperienciaDB(experiencia).subscribe((experiencia) =>{
       this.miExperiencia.push(experiencia);

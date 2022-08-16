@@ -1,22 +1,13 @@
 <div id="disenobox" class="row">
     <h2 id="disenotitulo">Habilidades
+    <button class="btn btn-secondary" (click)="addSkill()">
+        Agregar Habilidad
+    </button>
     </h2>
-    <div role="tabpanel" *ngFor="let habilidad of miHabilidad">
-      <!-- List group -->
-      <div class="list-group" id="myList" role="tablist">
-        <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">{{habilidad.tipo_habilidad}}</a>
-      </div>
-    
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div class="tab-pane active" id="home" role="tabpanel">{{habilidad.descripcion}}</div>
-      </div>
-    </div>
+    <app-habilidades-items
+    *ngFor="let habilidad of miHabilidad"
+    [habilidad]="habilidad"
+    (borrarHabilidadPass)="eliminarHabilidad(habilidad)"
+    >
+    </app-habilidades-items>
 </div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab a:last-child')
-  const firstTab = new bootstrap.Tab(firstTabEl)
-
-  firstTab.show()
-</script>

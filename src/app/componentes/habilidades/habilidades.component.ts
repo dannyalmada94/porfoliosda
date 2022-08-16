@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HabilidadI } from 'src/app/HabilidadI';
 import { DatabaseService } from 'src/app/servicios/database.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,9 +9,10 @@ import { DatabaseService } from 'src/app/servicios/database.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-  miHabilidad:any
+  miHabilidad:HabilidadI [] = [];
 
-  constructor(private serviciodatabase:DatabaseService) { }
+  constructor(private serviciodatabase:DatabaseService,
+              private router:Router) { }
 
   ngOnInit(): void {
     this.mostrarDatos()
@@ -20,6 +23,14 @@ export class HabilidadesComponent implements OnInit {
       console.log(data);
       this.miHabilidad=data;
     })
-
 }
+
+eliminarHabilidad(habilidad:HabilidadI) {
+  this.serviciodatabase.borrarHabilidad(habilidad).subscribe(() => {
+    this.miHabilidad = this.miHabilidad.filter(h => h.id_habilidades !== habilidad.id_habilidades)
+  })
+}
+ addSkill() {
+  this.router.navigate(['/porfolio/habilidadsave']);
+ }
 }

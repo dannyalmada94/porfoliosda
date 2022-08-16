@@ -1,0 +1,25 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Educación
+    <button class="btn btn-secondary" (click)="backPorfolio()">
+      Volver
+    </button>
+    </h2>
+    <form [formGroup]="editarEstForm" (ngSubmit)="editarEducacion(editarEstForm.value)" >
+    <div class="container">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Tipo Educación</span>
+            <input type="text" id="tipo_educacion" class="form-control" formControlName="tipo_educacion" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Titulo</span>
+            <input type="text" id="titulo" class="form-control" formControlName="titulo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Descripcion</span>
+            <input type="text" id="descripcion" class="form-control" formControlName="descripcion" aria-label="Sizing example imput" aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    </div>
+    </form>
+</div>

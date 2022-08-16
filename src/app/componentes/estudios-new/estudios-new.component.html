@@ -1,0 +1,42 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Educación
+    <button class="btn btn-secondary" (click)="backPorfolio()">Volver</button>
+    </h2>
+    <form class="form-control" (ngSubmit)="guardarEducacion()">
+    <div class="input-group">
+        <span class="input-group-text">Tipo Educación</span>
+        <textarea 
+        class="form-control"
+        aria-label="With textarea"
+        placeholder="Curso, Secundaria, Terciaria, Bootcamp, Universitaria, etc."
+        type="text"
+        name="tipo_educacion"
+        id="tipo_educacion"
+        [(ngModel)]="tipo_educacion"></textarea>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Titulo</span>
+        <textarea 
+        class="form-control"
+        aria-label="With textarea"
+        placeholder="Bachillerato, Licenciatura, Tecnicatura, etc."
+        type="text"
+        name="titulo"
+        id="titulo"
+        [(ngModel)]="titulo"></textarea>
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Descripcion</span>
+        <textarea 
+        class="form-control" 
+        aria-label="With textarea"
+        placeholder="Describe lo que aprendiste, el lugar dónde estudiaste, fechas, etc."
+        type="text"
+        name="descripcion"
+        id="descripcion"
+        [(ngModel)]="descripcion"></textarea>
+    </div>
+    <br>
+    <input type="submit" value="Guardar Educación" class="input-group" class="btn btn-warning">
+    </form>
+</div>

@@ -1,0 +1,35 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Habilidades
+    <button class="btn btn-secondary" (click)="backPorfolio()">
+        Volver
+    </button>
+    </h2>
+    <div class="container">
+        <form [formGroup]="editarHabForm" (ngSubmit)="formularioEditarHab(editarHabForm.value)">
+            <div class="card">
+                <div class="card-body">
+                  <label>Habilidad</label>
+                  <input 
+                   class="form-control"
+                   type="text" 
+                   id="tipo_habilidad"
+                   formControlName="tipo_habilidad"
+                   placeholder="Nombre de la habilidad" 
+                   aria-label="default input example"
+                   >
+                  <label>Descripcion</label>
+                  <input 
+                  class="form-control" 
+                  type="text" 
+                  id="descripcion"
+                  formControlName="descripcion"
+                  placeholder="Descripcion" 
+                  aria-label="default input example"
+                  >
+                  <br>
+                  <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                </div>
+              </div>
+        </form>
+    </div>
+</div>

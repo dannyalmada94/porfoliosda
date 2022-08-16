@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <a class="list-group-item list-group-item-action" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{educacion.titulo}}</h5>
+        <button class="btn btn-primary" (click)="editEducacion(educacion.id_educacion)">Editar</button>
+        <button class="btn btn-danger" (click)="borrarEducacion(educacion)">Eliminar</button>
+      </div>
+      <p class="mb-1">{{educacion.tipo_educacion}}</p>
+      <small>{{educacion.descripcion}}</small>
+    </a>
+</ul>

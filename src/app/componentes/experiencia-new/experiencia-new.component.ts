@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./experiencia-new.component.css']
 })
 export class ExperienciaNewComponent implements OnInit {
+  //Emito el método "agregarExperiencia" hacia el componente padre "experiencia-save"
   @Output() agregarExperiencia:EventEmitter<ExperienciaI> = new EventEmitter();
   modalidad:string = "";
   nombre_empresa:string = "";
@@ -18,6 +19,7 @@ export class ExperienciaNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Toma los parametros del formulario para enviarlos al componente padre mediante el metodo "agregarExperiencia"
   guardarExperiencia() {
     if(this.modalidad.length === 0){
       alert("Por favor, agregue una modalidad");
@@ -29,6 +31,7 @@ export class ExperienciaNewComponent implements OnInit {
     this.ngOnInit();
   }
 
+  //Al hacer click en el botón "Volver", simplemente nos redirige a la vista principal del porfolio
   backPorfolio() {
     this.router.navigate(['porfolio']);
   }

@@ -25,6 +25,16 @@ import { ExperienciaNewComponent } from './componentes/experiencia-new/experienc
 import { ExperienciaSaveComponent } from './componentes/experiencia-save/experiencia-save.component';
 import { ExperienciaEditComponent } from './componentes/experiencia-edit/experiencia-edit.component';
 import { ExperienciaFormsComponent } from './componentes/experiencia-forms/experiencia-forms.component';
+import { EstudiosItemsComponent } from './componentes/estudios-items/estudios-items.component';
+import { EstudiosSaveComponent } from './componentes/estudios-save/estudios-save.component';
+import { EstudiosNewComponent } from './componentes/estudios-new/estudios-new.component';
+import { EstudiosEditComponent } from './componentes/estudios-edit/estudios-edit.component';
+import { EstudiosFormComponent } from './componentes/estudios-form/estudios-form.component';
+import { HabilidadesItemsComponent } from './componentes/habilidades-items/habilidades-items.component';
+import { HabilidadesNewComponent } from './componentes/habilidades-new/habilidades-new.component';
+import { HabilidadesSaveComponent } from './componentes/habilidades-save/habilidades-save.component';
+import { HabilidadesEditComponent } from './componentes/habilidades-edit/habilidades-edit.component';
+import { HabilidadesFormComponent } from './componentes/habilidades-form/habilidades-form.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +54,17 @@ import { ExperienciaFormsComponent } from './componentes/experiencia-forms/exper
     ExperienciaNewComponent,
     ExperienciaSaveComponent,
     ExperienciaEditComponent,
-    ExperienciaFormsComponent
+    ExperienciaFormsComponent,
+    EstudiosItemsComponent,
+    EstudiosSaveComponent,
+    EstudiosNewComponent,
+    EstudiosEditComponent,
+    EstudiosFormComponent,
+    HabilidadesItemsComponent,
+    HabilidadesNewComponent,
+    HabilidadesSaveComponent,
+    HabilidadesEditComponent,
+    HabilidadesFormComponent
   ],
   imports: [
     BrowserModule,
