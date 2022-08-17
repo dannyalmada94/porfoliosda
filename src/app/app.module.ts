@@ -41,6 +41,10 @@ import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnolo
 import { TecnologiasEditComponent } from './componentes/tecnologias-edit/tecnologias-edit.component';
 import { TecnologiasFormComponent } from './componentes/tecnologias-form/tecnologias-form.component';
 import { ProyectosItemsComponent } from './componentes/proyectos-items/proyectos-items.component';
+import { ProyectosNewComponent } from './componentes/proyectos-new/proyectos-new.component';
+import { ProyectosSaveComponent } from './componentes/proyectos-save/proyectos-save.component';
+import { ProyectosEditComponent } from './componentes/proyectos-edit/proyectos-edit.component';
+import { ProyectosFormComponent } from './componentes/proyectos-form/proyectos-form.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +80,11 @@ import { ProyectosItemsComponent } from './componentes/proyectos-items/proyectos
     TecnologiasSaveComponent,
     TecnologiasEditComponent,
     TecnologiasFormComponent,
-    ProyectosItemsComponent
+    ProyectosItemsComponent,
+    ProyectosNewComponent,
+    ProyectosSaveComponent,
+    ProyectosEditComponent,
+    ProyectosFormComponent
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@ export class TecnologiasComponent implements OnInit {
   }
 
   addTech() {
-    this.router.navigate(['/porfolio/tecnologiasave']);
+    this.router.navigate(['porfolio/tecnologiasave']);
   }
   
 }

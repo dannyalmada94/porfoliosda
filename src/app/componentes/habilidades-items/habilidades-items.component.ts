@@ -21,6 +21,6 @@ export class HabilidadesItemsComponent implements OnInit {
   }
 
   editSkill(id_habilidades:any) {
-    this.router.navigate(['/porfolio/habilidadedit', id_habilidades])
+    this.router.navigate(['porfolio/habilidadedit', id_habilidades])
   }
 }

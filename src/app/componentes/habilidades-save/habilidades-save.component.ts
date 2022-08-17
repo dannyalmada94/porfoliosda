@@ -20,7 +20,7 @@ export class HabilidadesSaveComponent implements OnInit {
   agregarNuevaHabilidad(habilidad:HabilidadI) {
     this.databaseservice.agregarHabilidadDB(habilidad).subscribe((habilidad) => {
       this.miHabilidad.push(habilidad);
-      this.router.navigate(['/porfolio']);
+      this.router.navigate(['porfolio']);
     })
   }
 }

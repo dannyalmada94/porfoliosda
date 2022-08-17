@@ -20,7 +20,7 @@ export class TecnologiasItemsComponent implements OnInit {
   }
 
   editTech(id_tecnologias:any) {
-    this.router.navigate(['/porfolio/tecnologiaedit', id_tecnologias]);
+    this.router.navigate(['porfolio/tecnologiaedit', id_tecnologias]);
   }
 
 }

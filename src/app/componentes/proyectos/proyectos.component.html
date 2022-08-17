@@ -1,8 +1,13 @@
 <div id="disenobox" class="row">
     <h2 id="disenotitulo">Proyectos
+    <button 
+    class="btn btn-secondary"
+    (click)="addProject()">Agregar Proyecto</button>
     </h2>
     <app-proyectos-items
     *ngFor="let proyecto of misProyectos"
-    [proyecto]="proyecto">
+    [proyecto]="proyecto"
+    (borrarProyectoPass)="eliminarProyecto(proyecto)"
+    >
     </app-proyectos-items>
 </div>

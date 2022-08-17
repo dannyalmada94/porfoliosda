@@ -22,7 +22,7 @@ export class ExperienciaSaveComponent implements OnInit {
   agregarNuevaExperiencia(experiencia:ExperienciaI) {
     this.serviciodatabase.agregarExperienciaDB(experiencia).subscribe((experiencia) =>{
       this.miExperiencia.push(experiencia);
-      this.router.navigate(['/porfolio']);
+      this.router.navigate(['porfolio']);
     })
   }
 

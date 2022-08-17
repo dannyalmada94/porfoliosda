@@ -30,6 +30,6 @@ export class HabilidadesNewComponent implements OnInit {
   }
 
   backPorfolio() {
-    this.router.navigate(['/porfolio']);
+    this.router.navigate(['porfolio']);
   }
 }

@@ -19,7 +19,7 @@ export class EstudiosSaveComponent implements OnInit {
   agregarNuevaEducacion(educacion:EstudiosI) {
     this.databaseservice.agregarEducacionDB(educacion).subscribe((educacion) => {
       this.miEducacion.push(educacion);
-      this.router.navigate(['/porfolio']);
+      this.router.navigate(['porfolio']);
     })
     
   }

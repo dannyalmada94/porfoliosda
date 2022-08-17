@@ -1,0 +1,31 @@
+<div id="disenobox" class="row">
+    <h2 id="disenotitulo">Proyectos
+        <button class="btn btn-secondary" (click)="backPorfolio()">
+            Volver
+        </button>
+    </h2>
+    <form class="form-floating" [formGroup]="editarProyForm" (ngSubmit)="formularioEditarProy(editarProyForm.value)">
+        <input 
+        type="text" 
+        class="form-control"
+        id="floatingInputValue"
+        id="nombre_proyecto"
+        formControlName="nombre_proyecto" 
+        placeholder="name@example.com">
+        <label 
+        for="floatingInputValue">Nombre del Proyecto</label>
+        <br>
+        <div class="form-floating">
+            <textarea 
+            class="form-control" 
+            placeholder="Leave a comment here" 
+            id="floatingTextarea"
+            type="text"
+            id="text"
+            formControlName="descripcion"></textarea>
+            <label for="floatingTextarea">Descripción del proyecto</label>
+        </div>
+        <br>
+        <button class="btn btn-warning" type="submit">Guardar cambios</button>
+    </form>   
+</div>

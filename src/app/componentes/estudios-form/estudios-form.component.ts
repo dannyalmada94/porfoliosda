@@ -36,12 +36,12 @@ export class EstudiosFormComponent implements OnInit {
 
 
   backPorfolio() {
-    this.router.navigate(['/porfolio']);
+    this.router.navigate(['porfolio']);
   }
 
   editarEducacion(datosEstudios:any) {
     this.databaseservice.editarEducacion(datosEstudios).subscribe();
-    this.router.navigate(['/porfolio']);
+    this.router.navigate(['porfolio']);
   }
 
 }

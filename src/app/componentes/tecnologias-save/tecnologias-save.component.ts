@@ -21,7 +21,7 @@ export class TecnologiasSaveComponent implements OnInit {
   agregarNuevaTecnologia(tecnologia:TecnologiasI) {
     this.databaseservice.agregarTecnologiaDB(tecnologia).subscribe((tecnologia) => {
       this.miTecnologia.push(tecnologia);
-      this.router.navigate(['/porfolio']);
+      this.router.navigate(['porfolio']);
     })
   }
 

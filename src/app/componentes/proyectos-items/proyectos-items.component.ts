@@ -10,10 +10,18 @@ import { Router } from '@angular/router';
 })
 export class ProyectosItemsComponent implements OnInit {
   @Input() proyecto:any
+  @Output() borrarProyectoPass:EventEmitter<ProyectosI> = new EventEmitter();
 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  eliminarProyecto(proyecto:ProyectosI) {
+    this.borrarProyectoPass.emit(proyecto);
+  }
+
+  editProy(id_proyecto:ProyectosI) {
+    this.router.navigate(['porfolio/proyectoedit', id_proyecto]);
+  }
 }

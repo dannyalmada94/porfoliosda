@@ -21,6 +21,6 @@ export class EstudiosItemsComponent implements OnInit {
   }
 
   editEducacion(id_educacion:EstudiosI) {
-    this.router.navigate(['/porfolio/estudioedit', id_educacion]);
+    this.router.navigate(['porfolio/estudioedit', id_educacion]);
   }
 }

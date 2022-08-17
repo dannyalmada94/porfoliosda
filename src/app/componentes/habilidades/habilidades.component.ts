@@ -31,6 +31,6 @@ eliminarHabilidad(habilidad:HabilidadI) {
   })
 }
  addSkill() {
-  this.router.navigate(['/porfolio/habilidadsave']);
+  this.router.navigate(['porfolio/habilidadsave']);
  }
 }

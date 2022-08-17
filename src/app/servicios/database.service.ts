@@ -33,7 +33,26 @@ export class DatabaseService {
 //Métodos correspondientes al componente "Proyectos"
 
 obtenerDatosProyecto(): Observable<ProyectosI[]> {
-  return this.http.get<ProyectosI[]>(this.urlDos)
+  return this.http.get<ProyectosI[]>(this.urlDos);
+}
+
+agregarProyectoDB(proyecto:ProyectosI): Observable<ProyectosI> {
+  return this.http.post<ProyectosI>(this.urlDos, proyecto, httpOptions);
+}
+
+borrarProyecto(proyecto:ProyectosI): Observable<ProyectosI[]> {
+  const url = `http://localhost:8080/proyectos/borrar/${proyecto.id_proyecto}`
+  return this.http.delete<ProyectosI[]>(url);
+}
+
+obtenerProyecto(id_proyecto:any): Observable<ProyectosI> {
+  const url = `http://localhost:8080/proyectos/${id_proyecto}`
+  return this.http.get<ProyectosI>(url);
+}
+
+editarProyecto(datosProyecto:ProyectosI): Observable<ProyectosI> {
+  const url = `http://localhost:8080/proyectos/editar/${datosProyecto.id_proyecto}`
+  return this.http.put<ProyectosI>(url, datosProyecto);
 }
 
 //Métodos correspondientes al componente "Educacion"
