@@ -38,6 +38,9 @@ import { HabilidadesFormComponent } from './componentes/habilidades-form/habilid
 import { TecnologiasItemsComponent } from './componentes/tecnologias-items/tecnologias-items.component';
 import { TecnologiasNewComponent } from './componentes/tecnologias-new/tecnologias-new.component';
 import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnologias-save.component';
+import { TecnologiasEditComponent } from './componentes/tecnologias-edit/tecnologias-edit.component';
+import { TecnologiasFormComponent } from './componentes/tecnologias-form/tecnologias-form.component';
+import { ProyectosItemsComponent } from './componentes/proyectos-items/proyectos-items.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,10 @@ import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnolo
     HabilidadesFormComponent,
     TecnologiasItemsComponent,
     TecnologiasNewComponent,
-    TecnologiasSaveComponent
+    TecnologiasSaveComponent,
+    TecnologiasEditComponent,
+    TecnologiasFormComponent,
+    ProyectosItemsComponent
   ],
   imports: [
     BrowserModule,

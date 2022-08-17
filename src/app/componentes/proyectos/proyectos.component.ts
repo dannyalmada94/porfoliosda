@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from 'src/app/servicios/database.service';
+import { ProyectosI } from 'src/app/ProyectosI';
 
 @Component({
   selector: 'app-proyectos',
@@ -7,7 +8,7 @@ import { DatabaseService } from 'src/app/servicios/database.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  misProyectos:any
+  misProyectos:ProyectosI [] = [];
   constructor(private serviciodatabase:DatabaseService) { }
 
   ngOnInit(): void {

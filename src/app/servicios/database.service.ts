@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { EstudiosI } from '../EstudiosI';
 import { ExperienciaI } from '../Experiencia';
 import { HabilidadI } from '../HabilidadI';
+import { ProyectosI } from '../ProyectosI';
 import { TecnologiasI } from '../TecnologiasI';
 
 const httpOptions = {
@@ -31,8 +32,8 @@ export class DatabaseService {
 
 //Métodos correspondientes al componente "Proyectos"
 
-obtenerDatosProyecto(): Observable<any[]> {
-  return this.http.get<any[]>(this.urlDos)
+obtenerDatosProyecto(): Observable<ProyectosI[]> {
+  return this.http.get<ProyectosI[]>(this.urlDos)
 }
 
 //Métodos correspondientes al componente "Educacion"
@@ -60,8 +61,8 @@ editarEducacion(datosEstudios:EstudiosI): Observable<EstudiosI> {
 }
 
 //Métodos correspondientes al componente "Habilidades"
-obtenerDatosHabilidad(): Observable<any[]> {
-  return this.http.get<any[]>(this.urlCuatro)
+obtenerDatosHabilidad(): Observable<HabilidadI[]> {
+  return this.http.get<HabilidadI[]>(this.urlCuatro)
 }
 
 borrarHabilidad(habilidad:HabilidadI): Observable<HabilidadI[]> {
@@ -107,8 +108,8 @@ obtenerExperiencia(id_experiencia:any): Observable<ExperienciaI> {
 }
 
 //Métodos correrspondientes al componente "Tecnologias"
-obtenerDatosTecnologia(): Observable<any[]> {
-  return this.http.get<any[]>(this.urlSeis)
+obtenerDatosTecnologia(): Observable<TecnologiasI[]> {
+  return this.http.get<TecnologiasI[]>(this.urlSeis)
 }
 
 borrarTecnologia(tecnologia:TecnologiasI): Observable<TecnologiasI[]> {
@@ -120,6 +121,15 @@ agregarTecnologiaDB(tecnologia:TecnologiasI): Observable<TecnologiasI> {
   return this.http.post<TecnologiasI>(this.urlSeis, tecnologia, httpOptions)
 }
 
+obtenerTecnologia(id_tecnologias:any): Observable<TecnologiasI> {
+  const url = `http://localhost:8080/tecnologias/${id_tecnologias}`
+  return this.http.get<TecnologiasI>(url);
+}
+
+editarTecnologia(tecnologia:TecnologiasI): Observable<TecnologiasI> {
+  const url = `http://localhost:8080/tecnologias/editar/${tecnologia.id_tecnologias}`
+  return this.http.put<TecnologiasI>(url, tecnologia);
+}
 
  
 }

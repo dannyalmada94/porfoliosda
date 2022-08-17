@@ -11,6 +11,7 @@ import { EstudiosEditComponent } from './componentes/estudios-edit/estudios-edit
 import { HabilidadesSaveComponent } from './componentes/habilidades-save/habilidades-save.component';
 import { HabilidadesEditComponent } from './componentes/habilidades-edit/habilidades-edit.component';
 import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnologias-save.component';
+import { TecnologiasEditComponent } from './componentes/tecnologias-edit/tecnologias-edit.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/porfolio'},
@@ -52,6 +53,11 @@ const routes: Routes = [
   {
     path: 'porfolio/tecnologiasave',
     component: TecnologiasSaveComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
+  },
+  {
+    path: 'porfolio/tecnologiaedit/:id_tecnologias',
+    component:TecnologiasEditComponent,
     ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   { path:'registro', component: RegistroComponent},
