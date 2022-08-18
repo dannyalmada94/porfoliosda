@@ -12,7 +12,7 @@ export class TecnologiasNewComponent implements OnInit {
   lenguaje_framework:string = "";
   descripcion:string = "";
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -29,4 +29,7 @@ export class TecnologiasNewComponent implements OnInit {
     console.log(nuevaTecnologia);
   }
 
+  backPorfolio() {
+    this.router.navigate(['porfolio'])
+  }
 }

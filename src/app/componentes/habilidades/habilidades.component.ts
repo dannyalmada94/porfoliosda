@@ -20,7 +20,6 @@ export class HabilidadesComponent implements OnInit {
 
   mostrarDatos() {
     this.serviciodatabase.obtenerDatosHabilidad().subscribe(data =>{
-      console.log(data);
       this.miHabilidad=data;
     })
 }

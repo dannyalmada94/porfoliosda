@@ -1,12 +1,28 @@
 <div class="container">
-    <div class="card">
-        <h4 class="card-header">{{habilidad.tipo_habilidad}}
-            <i class="bi bi-x-circle"
-            (click)="borrarHabilidad(habilidad)"
-            >
-            </i>
-        </h4>
-        <div class="card-body">
+    <div class="card">     
+      <h4 
+      class="card-header"
+      >
+      <div 
+      class="row"
+      >
+      <div 
+      class="col-sm-11"
+      >
+      {{habilidad.tipo_habilidad}}
+      </div>
+      <div
+      class="col-sm-1"
+      >      
+      <i 
+      class="bi bi-x-circle"
+      (click)="borrarHabilidad(habilidad)"
+      >
+      </i>
+      </div>
+      </div>
+      </h4>
+      <div class="card-body">
           <h5 class="card-title">Breve descripción</h5>
           <p class="card-text">{{habilidad.descripcion}}</p>
           <button class="btn btn-primary" (click)="editSkill(habilidad.id_habilidades)">Editar</button>

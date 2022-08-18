@@ -1,6 +1,6 @@
 <nav id="header" class="navbar fixed-top">
     <div class="container-fluid">
-        <div class="col-sm-3" >
+        <div class="col-sm-3" *ngFor="let persona of persona">
           {{persona.nombre+' '+persona.apellido}}
         </div>
         <div class="col-sm-7" id="redessoc">

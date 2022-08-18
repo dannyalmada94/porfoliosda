@@ -28,4 +28,8 @@ export class ProyectosNewComponent implements OnInit {
     this.ngOnInit();
     console.log(nuevoProyecto);
   }
+
+  backPorfolio() {
+    this.router.navigate(['porfolio']);
+  }
 }

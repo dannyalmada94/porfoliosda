@@ -9,7 +9,7 @@ import { UserService } from 'src/app/servicios/user.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  persona:any;
+  persona:any=[];
 
   constructor(private userService:UserService,
       private router:Router,
@@ -29,7 +29,6 @@ export class EncabezadoComponent implements OnInit {
     }
     mostrarDatos() {
       this.serviciodatabase.obtenerDatosPersona().subscribe(data =>{
-        console.log(data);
         this.persona=data;
       })
     }

@@ -7,8 +7,7 @@ import { DatabaseService } from 'src/app/servicios/database.service';
   styleUrls: ['./acercami.component.css']
 })
 export class AcercamiComponent implements OnInit {
-  miPorfolio:any;
-
+  persona:any = [];
   constructor(private serviciodatabase:DatabaseService) { }
 
   ngOnInit(): void {
@@ -17,8 +16,7 @@ export class AcercamiComponent implements OnInit {
 
   mostrarDatos() {
     this.serviciodatabase.obtenerDatosPersona().subscribe(data=>{
-      console.log(data);
-      this.miPorfolio=data;
+      this.persona=data;
     })
   }
 

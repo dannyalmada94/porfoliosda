@@ -1,16 +1,36 @@
 <div class="container">
- <div class="row" class="card border-success mb-3" style="max-width: 18rem;">
+ <div class="card border-success mb-3" style="max-width: 30rem;">
     <div 
-    class="card-header">{{tecnologia.lenguaje_framework}}
+    class="card-header"
+    >
+    <div 
+    class="row"
+    >
+    <div 
+    class="col-sm-8"
+    >
+    {{tecnologia.lenguaje_framework}}
+    </div>
+    <div 
+    class="col-sm-2"
+    >
     <i 
     class="bi bi-pen"
     (click)="editTech(tecnologia.id_tecnologias)"
-    ></i>
+    >
+    </i>
+    </div>
+    <div
+    class="col-4 col-sm-2"
+    >    
     <i 
     class="bi bi-x-square" 
     (click)="borrarTecnologia(tecnologia)"
-    ></i>
-</div>
+    >
+    </i>
+    </div>
+    </div>
+    </div> 
     <div class="card-body text-success">
       <p class="card-text">{{tecnologia.descripcion}}</p>
     </div>

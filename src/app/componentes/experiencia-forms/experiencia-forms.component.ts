@@ -52,6 +52,7 @@ export class ExperienciaFormsComponent implements OnInit {
   formularioEditarExp(datosExperiencia:any) {
     this.databaseservice.editarExperiencia(datosExperiencia).subscribe();
     this.router.navigate(['porfolio']);
+    this.ngOnInit();
     }
 }
 

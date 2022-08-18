@@ -1,6 +1,21 @@
-<div id="disenobox" class="row">
-    <h2 id="disenotitulo">Experiencia
-        <button type="button" class="btn btn-primary" (click)="backPorfolio()">Volver</button>
+<div id="disenobox">
+    <h2 
+    id="disenotitulo"
+    >
+    <div class="row">
+    <div 
+    class="col-10">
+    Experiencia  
+    </div>
+    <div
+    class="col-2">  
+    <button 
+    type="button" 
+    class="btn btn-secondary" 
+    (click)="backPorfolio()">Volver
+    </button>
+    </div>
+    </div>
     </h2>
     <div class="container">
         <form [formGroup]="editarExpForm" (ngSubmit)="formularioEditarExp(editarExpForm.value)">

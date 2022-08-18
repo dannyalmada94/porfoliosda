@@ -7,7 +7,7 @@ import { DatabaseService } from 'src/app/servicios/database.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  persona:any;
+  persona:any=[];
 
   constructor (private serviciodatabase:DatabaseService) {
     
@@ -15,14 +15,7 @@ export class PerfilComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.mostrarDatos();
-};
-
-mostrarDatos() {
-  this.serviciodatabase.obtenerDatosPersona().subscribe(data =>{
-    console.log(data);
-    this.persona=data;
-  })
+      this.serviciodatabase.obtenerDatosPersona().subscribe(data =>{
+    this.persona=data;})
 }
-
 }

@@ -3,7 +3,7 @@
         <img id="perfilimg" src="assets/dannyperfil.jpg" class="rounded-circle" alt="Pronto sera mi imagen de perfil">
     </div>
   </div>
-<div id="titulo" class="container-fluid">
+<div id="titulo" class="container-fluid" *ngFor="let persona of persona">
   <h1>{{persona.nombre+' '+persona.apellido}}</h1>
   <p>{{persona.localidad +', '+persona.pais}}</p>
   <p>{{persona.profesion_oficio}}</p>

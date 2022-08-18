@@ -20,7 +20,6 @@ export class TecnologiasComponent implements OnInit {
 
   mostrarDatos() {
     this.serviciodatabase.obtenerDatosTecnologia().subscribe(data =>{
-      console.log(data);
       this.miTecnologia=data;
     })
 

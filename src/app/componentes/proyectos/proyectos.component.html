@@ -1,8 +1,20 @@
-<div id="disenobox" class="row">
-    <h2 id="disenotitulo">Proyectos
+<div id="disenobox">
+    <h2 id="disenotitulo">
+    <div class="row">
+    <div
+    class="col-10"
+    >Proyectos
+    </div>   
+    <div
+    class="col-2"
+    >
     <button 
     class="btn btn-secondary"
-    (click)="addProject()">Agregar Proyecto</button>
+    (click)="addProject()"
+    >Agregar Proyecto
+    </button>
+    </div>
+    </div>
     </h2>
     <app-proyectos-items
     *ngFor="let proyecto of misProyectos"

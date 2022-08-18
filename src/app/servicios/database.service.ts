@@ -17,7 +17,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DatabaseService {
-  private apiUrl = 'http://localhost:8080/personas/1'
+  private apiUrl = 'http://localhost:8080/personas'
   private urlDos = 'http://localhost:8080/proyectos'
   private urlTres = 'http://localhost:8080/educacion'
   private urlCuatro = 'http://localhost:8080/habilidades'
@@ -26,8 +26,8 @@ export class DatabaseService {
 
   constructor(private http:HttpClient) { }
 
-  obtenerDatosPersona(): Observable<any> {
-    return this.http.get<any>(this.apiUrl)
+  obtenerDatosPersona(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl)
 }
 
 //Métodos correspondientes al componente "Proyectos"

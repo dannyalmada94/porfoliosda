@@ -97,3 +97,9 @@
     border-width: 2px;
     margin-left: 50%;
 }
+
+#btn_add {
+    margin-left: 75%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
