@@ -1,14 +1,12 @@
-<div id="disenobox" class="row">
-    <h2 id="disenotitulo">Proyectos
-    </h2><div id="disenobox">
+<div id="disenobox">
       <h2 id="disenotitulo">
       <div class="row">
       <div
-      class="col-10"
+      class="col-sm-10"
       >Proyectos
       </div>   
       <div
-      class="col-2"
+      class="col-sm-2"
       >
       <button 
       class="btn btn-secondary"
@@ -18,7 +16,15 @@
       </div>
       </div>
       </h2>
-    <form (ngSubmit)="guardarProyecto()">    
+    <form
+    class="form-control"
+    id="form-edit"
+    (ngSubmit)="guardarProyecto()"
+    >
+    <h4
+    >
+    Agregando proyecto
+    </h4>
         <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -70,7 +76,16 @@
           </div>
         </div>
         <br>
-        <input class="btn btn-warning" value="Guardar Proyecto" type="submit">
+        <div 
+        class="d-grid gap-2 col-6 mx-auto"
+        >
+        <button 
+        class="btn btn-warning" 
+        type="submit"
+        >
+        Guardar Proyecto
+        </button>
+        </div>
     </div>
     </form>
 

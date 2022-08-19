@@ -116,7 +116,7 @@ agregarExperienciaDB(experiencia:ExperienciaI): Observable<ExperienciaI> {
   return this.http.post<ExperienciaI>(this.urlCinco, experiencia, httpOptions);
 }
 
-editarExperiencia(datosExperiencia:ExperienciaI): Observable<ExperienciaI> {
+editarExperiencia(datosExperiencia:any): Observable<ExperienciaI> {
   const url = `http://localhost:8080/experiencias/editar/${datosExperiencia.id_experiencia}`
   return this.http.put<ExperienciaI>(url, datosExperiencia);
 }

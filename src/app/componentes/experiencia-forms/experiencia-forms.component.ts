@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatabaseService } from 'src/app/servicios/database.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ExperienciaI } from 'src/app/Experiencia';
 
 @Component({
   selector: 'app-experiencia-forms',
@@ -12,6 +13,7 @@ export class ExperienciaFormsComponent implements OnInit {
   //Igualé al tipo de datos "any", que no es lo recomendado, pero al intentar igualarlo a la interface "ExperienciaI"
   //me daba errores que no comprendía del todo bien
   datosExperiencia:any;
+  @Output() editarExperienciaPass:EventEmitter<any> = new EventEmitter();
   //Al tener que enviar un body con los mismos párametros que estan en el API para poder completar la solicitud
   //de manera exitosa, creo un nuevo formulario para poder ingresar los datos, con la particularidad de 
   //que ya están precargados los datos de la experiencia seleccionada y se muestran en el template, a excepción
@@ -50,9 +52,8 @@ export class ExperienciaFormsComponent implements OnInit {
 
   //Mediante este método realizo el envío de la información al método presente en el servicio
   formularioEditarExp(datosExperiencia:any) {
-    this.databaseservice.editarExperiencia(datosExperiencia).subscribe();
-    this.router.navigate(['porfolio']);
-    this.ngOnInit();
+    this.editarExperienciaPass.emit(datosExperiencia);
+    console.log(datosExperiencia);
     }
 }
 

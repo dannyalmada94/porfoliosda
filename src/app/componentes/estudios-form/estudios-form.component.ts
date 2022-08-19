@@ -40,8 +40,10 @@ export class EstudiosFormComponent implements OnInit {
   }
 
   editarEducacion(datosEstudios:any) {
-    this.databaseservice.editarEducacion(datosEstudios).subscribe();
-    this.router.navigate(['porfolio']);
+    this.databaseservice.editarEducacion(datosEstudios).subscribe(() =>{
+      this.ngOnInit();
+    });
+    this.router.navigate(['porfolio'])
   }
 
 }

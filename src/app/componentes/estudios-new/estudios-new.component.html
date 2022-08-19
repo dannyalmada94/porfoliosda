@@ -1,29 +1,62 @@
-<div id="disenobox" class="row">
-    <h2 id="disenotitulo">Educación
-    <button class="btn btn-secondary" (click)="backPorfolio()">Volver</button>
+<div id="disenobox">
+    <h2 id="disenotitulo">
+      <div class="row">      
+      <div 
+      class="col-sm-10"
+      >Educación
+      </div>
+      <div
+      class="col-sm-2"
+      >    
+      <button 
+      class="btn btn-secondary"
+      (click)="backPorfolio()"
+      >
+      Volver
+      </button>
+      </div>
+    </div>
     </h2>
-    <form class="form-control" (ngSubmit)="guardarEducacion()">
-    <div class="input-group">
-        <span class="input-group-text">Tipo Educación</span>
-        <textarea 
+    <form 
+    class="form-control" 
+    (ngSubmit)="guardarEducacion()"
+    id="form-edit"
+    >
+    <h4
+    >
+    Agregando educación
+    </h4>
+    <div class="container">
+        <div class="form-floating mb-3">
+        <input 
         class="form-control"
-        aria-label="With textarea"
+        id="floatingInput"
         placeholder="Curso, Secundaria, Terciaria, Bootcamp, Universitaria, etc."
         type="text"
         name="tipo_educacion"
         id="tipo_educacion"
-        [(ngModel)]="tipo_educacion"></textarea>
+        [(ngModel)]="tipo_educacion"
+        >
+        <label 
+        for="floatingInput"
+        >
+        Tipo de Educacion
+        </label>
     </div>
-    <div class="input-group">
-        <span class="input-group-text">Titulo</span>
-        <textarea 
+    <div class="form-floating mb-3">
+        <input 
         class="form-control"
-        aria-label="With textarea"
         placeholder="Bachillerato, Licenciatura, Tecnicatura, etc."
         type="text"
         name="titulo"
         id="titulo"
-        [(ngModel)]="titulo"></textarea>
+        id="floatingInput"
+        [(ngModel)]="titulo">
+        <label 
+        for="floatingInput"
+        >
+        Titulo
+        </label>
     </div>
     <div class="input-group">
         <span class="input-group-text">Descripcion</span>
@@ -34,9 +67,18 @@
         type="text"
         name="descripcion"
         id="descripcion"
-        [(ngModel)]="descripcion"></textarea>
+        [(ngModel)]="descripcion"
+        >
+        </textarea>
     </div>
     <br>
-    <input type="submit" value="Guardar Educación" class="input-group" class="btn btn-warning">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button 
+        type="submit"
+        class="btn btn-warning"
+        >
+        Guardar Educación
+        </button></div> 
+    </div>
     </form>
 </div>

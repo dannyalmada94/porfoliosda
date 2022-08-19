@@ -34,7 +34,7 @@ export class TecnologiasFormComponent implements OnInit {
 
   formularioEditarTec(tecnologia:any) {
     this.databaseservice.editarTecnologia(tecnologia).subscribe();
-    this.router.navigate(['porfolio']);
+    this.router.navigate(['porfolio']); 
   }
   
   backPorfolio() {

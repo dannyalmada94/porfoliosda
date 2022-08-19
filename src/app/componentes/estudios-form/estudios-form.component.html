@@ -1,25 +1,89 @@
-<div id="disenobox" class="row">
-    <h2 id="disenotitulo">Educación
-    <button class="btn btn-secondary" (click)="backPorfolio()">
+<div id="disenobox">
+    <h2 id="disenotitulo">
+      <div class="row">      
+      <div 
+      class="col-sm-10"
+      >Educación
+      </div>
+      <div
+      class="col-sm-2"
+      >    
+      <button 
+      class="btn btn-secondary"
+      (click)="backPorfolio()"
+      >
       Volver
-    </button>
+      </button>
+      </div>
+    </div>
     </h2>
-    <form [formGroup]="editarEstForm" (ngSubmit)="editarEducacion(editarEstForm.value)" >
+    <form 
+    class="form-control" 
+    [formGroup]="editarEstForm" 
+    (ngSubmit)="editarEducacion(editarEstForm.value)"
+    id="form-edit"
+    >
+    <h4
+    >
+    Editando educación
+    </h4>
     <div class="container">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Tipo Educación</span>
-            <input type="text" id="tipo_educacion" class="form-control" formControlName="tipo_educacion" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <div class="form-floating mb-3">
+            <input 
+            type="text" 
+            id="tipo_educacion"
+            id="floatingInput"
+            class="form-control" 
+            formControlName="tipo_educacion"
+            placeholder="Tipo de educación" 
+            >
+            <label 
+            for="floatingInput"
+            >
+            Tipo de Educacion
+            </label>
         </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Titulo</span>
-            <input type="text" id="titulo" class="form-control" formControlName="titulo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <div class="form-floating mb-3">
+            <input 
+            type="text" 
+            id="titulo"
+            id="floatingInput" 
+            class="form-control" 
+            formControlName="titulo"
+            placeholder="Titulo" 
+            >
+            <label 
+            for="floatingInput"
+            >
+            Titulo
+            </label>
         </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">Descripcion</span>
-            <input type="text" id="descripcion" class="form-control" formControlName="descripcion" aria-label="Sizing example imput" aria-describedby="inputGroup-sizing-lg">
+        <div class="input-group">
+            <span 
+            class="input-group-text"
+            >
+            Descripcion
+            </span>
+            <textarea 
+            type="text" 
+            id="descripcion" 
+            class="form-control" 
+            formControlName="descripcion" 
+            aria-label="With textarea"
+            >
+            </textarea>
         </div>
         <br><br>
-        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <div
+        class="d-grid gap-2"
+        >
+        <button 
+        type="submit" 
+        class="btn btn-primary"
+        >
+        Guardar cambios
+        </button>
+    </div>    
     </div>
     </form>
 </div>

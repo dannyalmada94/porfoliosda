@@ -15,6 +15,7 @@ export class PorfolioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
   }
 
   onClick() {

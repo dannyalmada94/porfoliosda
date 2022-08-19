@@ -18,7 +18,16 @@
     </div>
     </h2>
     <div class="container">
-        <form [formGroup]="editarExpForm" (ngSubmit)="formularioEditarExp(editarExpForm.value)">
+        <form
+        class="form-control"
+        [formGroup]="editarExpForm" 
+        (ngSubmit)="formularioEditarExp(editarExpForm.value)"
+        id="form-edit"
+        >
+        <h4
+        >
+        Editando Experiencia
+        </h4>
             <div class="form-group">
                  <label for="exampleFormControlInput1">Modalidad</label>
                  <input 
@@ -47,7 +56,14 @@
                 placeholder="Describe las funciones que desempeñabas, tambien las fechas">
            </div>
            <br><br>
-           <button type="submit" class="btn btn-primary">Guardar cambios</button>
+           <div class="d-grid gap-2">
+           <button 
+           type="submit" 
+           class="btn btn-primary"
+           >
+           Guardar cambios
+           </button>
+           </div>  
         </form>
     </div>
 </div>

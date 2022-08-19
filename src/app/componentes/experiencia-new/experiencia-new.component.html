@@ -18,7 +18,14 @@
     </div>
     </h2>
 <div>
-    <form class="form-control" (ngSubmit)="guardarExperiencia()">
+    <form 
+    class="form-control" 
+    (ngSubmit)="guardarExperiencia()"
+    id="form-edit">
+    <h4
+    >
+    Agregando Experiencia
+    </h4>
     <div class="input-group">
     <span class="input-group-text">Modalidad</span>
     <textarea 
@@ -52,7 +59,17 @@
         id="descripcion"
         [(ngModel)]="descripcion"></textarea>
     </div>
-    <input type="submit" value="Guardar experiencia" class="input-group" class="btn btn-warning">
+    <br>
+    <div
+    class="d-grid gap-2 col-6 mx-auto"
+    >
+    <button 
+    type="submit"
+    class="btn btn-warning"
+    >
+    Guardar Experiencia
+    </button>
+    </div>  
 </form>
 </div>
 </div>

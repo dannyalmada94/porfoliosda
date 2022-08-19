@@ -38,8 +38,8 @@ export class HabilidadesFormComponent implements OnInit {
 
   formularioEditarHab(habilidad:any) {
     this.databaseservice.editarHabilidad(habilidad).subscribe();
-    this.ngOnInit();
-    this.router.navigate(['porfolio']);
+      this.router.navigate(['porfolio'])
+      
   }
 
 }

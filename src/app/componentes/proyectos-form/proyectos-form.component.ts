@@ -34,7 +34,6 @@ export class ProyectosFormComponent implements OnInit {
 
   formularioEditarProy(proyecto:any) {
     this.databaseservice.editarProyecto(proyecto).subscribe();
-    this.ngOnInit();
     this.router.navigate(['porfolio']);
   }
 
