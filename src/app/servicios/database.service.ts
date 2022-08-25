@@ -19,13 +19,13 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DatabaseService {
-  private apiUrl = 'http://localhost:8080/personas'
-  private urlDos = 'http://localhost:8080/proyectos'
-  private urlTres = 'http://localhost:8080/educacion'
-  private urlCuatro = 'http://localhost:8080/habilidades'
-  private urlCinco = 'http://localhost:8080/experiencias'
-  private urlSeis = 'http://localhost:8080/tecnologias'
-  private urlSiete = 'http://localhost:8080/contacto'
+  private apiUrl = 'https://glacial-ravine-33253.herokuapp.com/personas'
+  private urlDos = 'https://glacial-ravine-33253.herokuapp.com/proyectos'
+  private urlTres = 'https://glacial-ravine-33253.herokuapp.com/educacion'
+  private urlCuatro = 'https://glacial-ravine-33253.herokuapp.com/habilidades'
+  private urlCinco = 'https://glacial-ravine-33253.herokuapp.com/experiencias'
+  private urlSeis = 'https://glacial-ravine-33253.herokuapp.com/tecnologias'
+  private urlSiete = 'https://glacial-ravine-33253.herokuapp.com/contacto'
 
   constructor(private http:HttpClient) { }
 
@@ -35,12 +35,12 @@ export class DatabaseService {
   }
 
   obtenerContacto(): Observable<ContactoI> {
-    const url = `http://localhost:8080/contacto/1`
+    const url = `https://glacial-ravine-33253.herokuapp.com/contacto/1`
     return this.http.get<ContactoI>(url);
   }
 
   editarContacto(contacto:ContactoI): Observable<ContactoI> {
-    const url = `http://localhost:8080/${contacto.id_contacto}`
+    const url = `https://glacial-ravine-33253.herokuapp.com/contacto/editar/${contacto.id_contacto}`
     return this.http.put<ContactoI>(url, contacto);
   }
 
@@ -51,12 +51,12 @@ export class DatabaseService {
 }
 
   obtenerPersona(id_persona:any): Observable<PersonaI> {
-    const url = `http://localhost:8080/personas/${id_persona}`
+    const url = `https://glacial-ravine-33253.herokuapp.com/personas/${id_persona}`
     return this.http.get<PersonaI>(url);
   }
 
   editarPersona(persona:PersonaI): Observable<PersonaI> {
-    const url = `http://localhost:8080/${persona.id_persona}`
+    const url = `https://glacial-ravine-33253.herokuapp.com/personas/editar/${persona.id_persona}`
     return this.http.put<PersonaI>(url, persona);
   }
 
@@ -71,17 +71,17 @@ agregarProyectoDB(proyecto:ProyectosI): Observable<ProyectosI> {
 }
 
 borrarProyecto(proyecto:ProyectosI): Observable<ProyectosI[]> {
-  const url = `http://localhost:8080/${proyecto.id_proyecto}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/proyectos/borrar/${proyecto.id_proyecto}`
   return this.http.delete<ProyectosI[]>(url);
 }
 
 obtenerProyecto(id_proyecto:any): Observable<ProyectosI> {
-  const url = `http://localhost:8080/proyectos/${id_proyecto}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/proyectos/${id_proyecto}`
   return this.http.get<ProyectosI>(url);
 }
 
 editarProyecto(datosProyecto:ProyectosI): Observable<ProyectosI> {
-  const url = `http://localhost:8080/proyectos/editar/${datosProyecto.id_proyecto}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/proyectos/editar/${datosProyecto.id_proyecto}`
   return this.http.put<ProyectosI>(url, datosProyecto);
 }
 
@@ -91,7 +91,7 @@ obtenerDatosEducacion(): Observable<EstudiosI[]> {
 }
 
 borrarEducacion(educacion:EstudiosI): Observable<EstudiosI[]> {
-  const url = `http://localhost:8080/${educacion.id_educacion}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/educacion/borrar/${educacion.id_educacion}`
   return this.http.delete<EstudiosI[]>(url);
 }
 
@@ -100,12 +100,12 @@ agregarEducacionDB(educacion:EstudiosI): Observable<EstudiosI> {
 }
 
 obtenerEducacion(id_educacion:any): Observable<EstudiosI> {
-  const url = `http://localhost:8080/educacion/${id_educacion}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/educacion/${id_educacion}`
   return this.http.get<EstudiosI>(url);
 }
 
 editarEducacion(datosEstudios:EstudiosI): Observable<EstudiosI> {
-  const url = `http://localhost:8080/educacion/editar/${datosEstudios.id_educacion}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/educacion/editar/${datosEstudios.id_educacion}`
   return this.http.put<EstudiosI>(url, datosEstudios);
 }
 
@@ -115,7 +115,7 @@ obtenerDatosHabilidad(): Observable<HabilidadI[]> {
 }
 
 borrarHabilidad(habilidad:HabilidadI): Observable<HabilidadI[]> {
-  const url = `http://localhost:8080/habilidades/borrar/${habilidad.id_habilidades}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/habilidades/borrar/${habilidad.id_habilidades}`
   return this.http.delete<HabilidadI[]>(url);
 }
 
@@ -124,12 +124,12 @@ agregarHabilidadDB(habilidad:HabilidadI): Observable<HabilidadI> {
 }
 
 obtenerHabilidad(id_habilidades:any): Observable<HabilidadI> {
-  const url = `http://localhost:8080/habilidades/${id_habilidades}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/habilidades/${id_habilidades}`
   return this.http.get<HabilidadI>(url);
 }
 
 editarHabilidad(habilidad:HabilidadI): Observable<HabilidadI> {
-  const url = `http://localhost:8080/habilidades/editar/${habilidad.id_habilidades}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/habilidades/editar/${habilidad.id_habilidades}`
   return this.http.put<HabilidadI>(url, habilidad);
 }
 //Métodos correspondientes al componente "Experiencia"
@@ -138,7 +138,7 @@ obtenerDatosExperiencia(): Observable<ExperienciaI[]> {
   return this.http.get<ExperienciaI[]>(this.urlCinco)
 }
 borrarExperiencia(experiencia:ExperienciaI): Observable<ExperienciaI[]> {
-  const url = `http://localhost:8080/experiencias/borrar/${experiencia.id_experiencia}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/experiencias/borrar/${experiencia.id_experiencia}`
   return this.http.delete<ExperienciaI[]>(url);
 }
 
@@ -147,12 +147,12 @@ agregarExperienciaDB(experiencia:ExperienciaI): Observable<ExperienciaI> {
 }
 
 editarExperiencia(datosExperiencia:any): Observable<ExperienciaI> {
-  const url = `http://localhost:8080/experiencias/editar/${datosExperiencia.id_experiencia}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/experiencias/editar/${datosExperiencia.id_experiencia}`
   return this.http.put<ExperienciaI>(url, datosExperiencia);
 }
 
 obtenerExperiencia(id_experiencia:any): Observable<ExperienciaI> {
-  const url = `http://localhost:8080/experiencias/${id_experiencia}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/experiencias/${id_experiencia}`
   return this.http.get<ExperienciaI>(url);
 }
 
@@ -162,7 +162,7 @@ obtenerDatosTecnologia(): Observable<TecnologiasI[]> {
 }
 
 borrarTecnologia(tecnologia:TecnologiasI): Observable<TecnologiasI[]> {
-  const url = `http://localhost:8080/tecnologias/borrar/${tecnologia.id_tecnologias}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/tecnologias/borrar/${tecnologia.id_tecnologias}`
   return this.http.delete<TecnologiasI[]>(url);
 }
 
@@ -171,12 +171,12 @@ agregarTecnologiaDB(tecnologia:TecnologiasI): Observable<TecnologiasI> {
 }
 
 obtenerTecnologia(id_tecnologias:any): Observable<TecnologiasI> {
-  const url = `http://localhost:8080/tecnologias/${id_tecnologias}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/tecnologias/${id_tecnologias}`
   return this.http.get<TecnologiasI>(url);
 }
 
 editarTecnologia(tecnologia:TecnologiasI): Observable<TecnologiasI> {
-  const url = `http://localhost:8080/tecnologias/editar/${tecnologia.id_tecnologias}`
+  const url = `https://glacial-ravine-33253.herokuapp.com/tecnologias/editar/${tecnologia.id_tecnologias}`
   return this.http.put<TecnologiasI>(url, tecnologia);
 }
 
