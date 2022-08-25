@@ -10,6 +10,7 @@ import { UserService } from 'src/app/servicios/user.service';
 })
 export class EncabezadoComponent implements OnInit {
   persona:any=[];
+  contacto:any=[];
 
   constructor(private userService:UserService,
       private router:Router,
@@ -18,18 +19,25 @@ export class EncabezadoComponent implements OnInit {
   
     ngOnInit(): void {
       this.mostrarDatos();
+      this.mostrarDatosContacto();
     }
   
     signOut() {
       this.userService.salir()
       .then(()=> {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       })
       .catch(error => console.log(error));
     }
     mostrarDatos() {
       this.serviciodatabase.obtenerDatosPersona().subscribe(data =>{
         this.persona=data;
+      })
+    }
+
+    mostrarDatosContacto() {
+      this.serviciodatabase.obtenerDatosContacto().subscribe(data =>{
+        this.contacto=data;
       })
     }
   

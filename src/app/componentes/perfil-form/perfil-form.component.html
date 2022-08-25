@@ -1,0 +1,151 @@
+<div id="perfilbox" class="position-relative">
+    <div class="position-absolute top-70 start-0 translate-middle-y">
+        <img id="perfilimg" src="assets/dannyperfil.jpg" class="rounded-circle" alt="Pronto sera mi imagen de perfil">
+    </div>
+  </div>
+<div id="titulo" class="container-fluid">
+    <div class="row">
+        <form 
+        class="form-control" 
+        id="form-edit"
+        [formGroup]="editarPersoForm"
+        (ngSubmit)="formularioEditarPers(editarPersoForm.value)"
+        >
+        <div
+        class="row"
+        >
+        <div 
+        class="col-sm-11">
+        <h4
+        >
+        Editando tus datos personales
+        </h4>
+        </div>
+        <div 
+        class="col-sm-1"
+        >
+        <i 
+        class="bi bi-x-circle"
+        (click)="backPorfolio()"
+        >
+        </i>
+        </div>
+        </div>
+            <div 
+            class="mb-3"
+            >
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >Nombre
+            </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="Introduce tu nombre o nombres"
+            id="nombre"
+            formControlName="nombre"
+            >
+            </div>
+            <div class="mb-3">
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >Apellido
+            </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="Apellido"
+            id="apellido"
+            formControlName="apellido"
+            >
+            </div>
+            <div class="mb-3">
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >Edad
+            </label>
+            <input 
+            type="number" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="edad"
+            id="edad"
+            formControlName="edad"
+            >
+            </div>
+            <div class="mb-3">
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >
+            Localidad
+            </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="Ingresa tu localidad y provinvia aquí"
+            id="localidad"
+            formControlName="localidad"
+            >
+            </div>
+            <div class="mb-3">
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >
+            País 
+            </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="País de origen"
+            id="pais"
+            formControlName="pais"
+            >
+            </div>
+            <div class="mb-3">
+            <label 
+            for="exampleFormControlInput1" 
+            class="form-label"
+            >
+            Profesión u oficio
+            </label>
+            <input 
+            type="email" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="Profesion u oficio"
+            id="profesion_oficio"
+            formControlName="profesion_oficio"
+            >
+            </div>
+            <div class="input-group">
+            <span class="input-group-text"
+            >
+            Acerca de mi
+            </span>
+            <textarea 
+            class="form-control" 
+            aria-label="With textarea"
+            id="acerca_de_mi"
+            formControlName="acerca_de_mi"
+            >
+            </textarea>
+            </div>
+            <br>
+            <button
+            class="btn btn-warning"
+            type="submit"
+            >
+            Guardar Cambios
+            </button>
+        </form>
+    </div>
+</div>

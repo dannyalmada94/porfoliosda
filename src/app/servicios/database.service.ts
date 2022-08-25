@@ -6,6 +6,8 @@ import { ExperienciaI } from '../Experiencia';
 import { HabilidadI } from '../HabilidadI';
 import { ProyectosI } from '../ProyectosI';
 import { TecnologiasI } from '../TecnologiasI';
+import { PersonaI } from '../PersonaI';
+import { ContactoI } from '../ContactoI';
 
 const httpOptions = {
   headers: new HttpHeaders ({
@@ -23,12 +25,40 @@ export class DatabaseService {
   private urlCuatro = 'http://localhost:8080/habilidades'
   private urlCinco = 'http://localhost:8080/experiencias'
   private urlSeis = 'http://localhost:8080/tecnologias'
+  private urlSiete = 'http://localhost:8080/contacto'
 
   constructor(private http:HttpClient) { }
+
+  //Métodos correspondientes al componente Contacto
+  obtenerDatosContacto(): Observable<any[]> {
+    return this.http.get<any[]>(this.urlSiete)
+  }
+
+  obtenerContacto(): Observable<ContactoI> {
+    const url = `http://localhost:8080/contacto/1`
+    return this.http.get<ContactoI>(url);
+  }
+
+  editarContacto(contacto:ContactoI): Observable<ContactoI> {
+    const url = `http://localhost:8080/${contacto.id_contacto}`
+    return this.http.put<ContactoI>(url, contacto);
+  }
+
+  //Métodos correspondientes al componente Perfil
 
   obtenerDatosPersona(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl)
 }
+
+  obtenerPersona(id_persona:any): Observable<PersonaI> {
+    const url = `http://localhost:8080/personas/${id_persona}`
+    return this.http.get<PersonaI>(url);
+  }
+
+  editarPersona(persona:PersonaI): Observable<PersonaI> {
+    const url = `http://localhost:8080/${persona.id_persona}`
+    return this.http.put<PersonaI>(url, persona);
+  }
 
 //Métodos correspondientes al componente "Proyectos"
 
@@ -41,7 +71,7 @@ agregarProyectoDB(proyecto:ProyectosI): Observable<ProyectosI> {
 }
 
 borrarProyecto(proyecto:ProyectosI): Observable<ProyectosI[]> {
-  const url = `http://localhost:8080/proyectos/borrar/${proyecto.id_proyecto}`
+  const url = `http://localhost:8080/${proyecto.id_proyecto}`
   return this.http.delete<ProyectosI[]>(url);
 }
 
@@ -61,7 +91,7 @@ obtenerDatosEducacion(): Observable<EstudiosI[]> {
 }
 
 borrarEducacion(educacion:EstudiosI): Observable<EstudiosI[]> {
-  const url = `http://localhost:8080/educacion/borrar/${educacion.id_educacion}`
+  const url = `http://localhost:8080/${educacion.id_educacion}`
   return this.http.delete<EstudiosI[]>(url);
 }
 

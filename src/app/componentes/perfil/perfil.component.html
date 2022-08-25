@@ -4,7 +4,14 @@
     </div>
   </div>
 <div id="titulo" class="container-fluid" *ngFor="let persona of persona">
-  <h1>{{persona.nombre+' '+persona.apellido}}</h1>
+  <h1>{{persona.nombre+' '+persona.apellido}}
+  <i 
+  class="bi bi-pen-fill"
+  (click)="editPersona(persona.id_persona)"
+  id="editicon"
+  >
+  </i>
+  </h1>
   <p>{{persona.localidad +', '+persona.pais}}</p>
   <p>{{persona.profesion_oficio}}</p>
   </div>

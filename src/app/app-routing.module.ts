@@ -14,6 +14,8 @@ import { TecnologiasSaveComponent } from './componentes/tecnologias-save/tecnolo
 import { TecnologiasEditComponent } from './componentes/tecnologias-edit/tecnologias-edit.component';
 import { ProyectosSaveComponent } from './componentes/proyectos-save/proyectos-save.component';
 import { ProyectosEditComponent } from './componentes/proyectos-edit/proyectos-edit.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { PerfilEditComponent} from './componentes/perfil-edit/perfil-edit.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/porfolio'},
@@ -72,6 +74,12 @@ const routes: Routes = [
     component:ProyectosEditComponent,
     ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
+  {
+    path: 'porfolio/perfiledit/:id_persona',
+    component:PerfilEditComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
+  },
+  { path: 'home', component: HomeComponent},
   { path:'registro', component: RegistroComponent},
   { path: 'login', component: LoginComponent}
 ];
