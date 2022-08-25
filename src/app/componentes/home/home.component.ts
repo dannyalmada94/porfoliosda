@@ -14,6 +14,7 @@ import { TecnologiasI } from 'src/app/TecnologiasI';
 })
 export class HomeComponent implements OnInit {
   persona:any=[];
+  contacto:any=[];
   miEducacion: EstudiosI [] = [];
   miExperiencia: ExperienciaI [] = [];
   miHabilidad:HabilidadI [] = [];
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
     this.mostrarDatosHabilidad();
     this.mostrarDatosProyectos();
     this.mostrarDatosTecnologia();
+    this.mostrarDatosContacto();
     
   }
 
@@ -71,6 +73,12 @@ mostrarDatosTecnologia() {
     this.miTecnologia=data;
   })
 
+}
+
+mostrarDatosContacto() {
+  this.serviciodatabase.obtenerDatosContacto().subscribe(data =>{
+    this.contacto=data;
+  })
 }
 
 }

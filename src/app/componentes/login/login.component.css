@@ -1,0 +1,15 @@
+#estilologin {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Sky_Full_Of_Stars_%28157838139%29.jpeg);
+    height: 650px;
+    background-size: cover;
+}
+h1{
+    color: rgb(7, 255, 255);
+}
+label {
+    color: rgb(4, 253, 4);
+}
+
+#loginhelp {
+    color: aliceblue;
+}
