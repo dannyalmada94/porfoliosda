@@ -45,6 +45,10 @@ import { ProyectosNewComponent } from './componentes/proyectos-new/proyectos-new
 import { ProyectosSaveComponent } from './componentes/proyectos-save/proyectos-save.component';
 import { ProyectosEditComponent } from './componentes/proyectos-edit/proyectos-edit.component';
 import { ProyectosFormComponent } from './componentes/proyectos-form/proyectos-form.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { PerfilEditComponent } from './componentes/perfil-edit/perfil-edit.component';
+import { PerfilFormComponent } from './componentes/perfil-form/perfil-form.component';
+import { EncabezadoEditComponent } from './componentes/encabezado-edit/encabezado-edit.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +88,11 @@ import { ProyectosFormComponent } from './componentes/proyectos-form/proyectos-f
     ProyectosNewComponent,
     ProyectosSaveComponent,
     ProyectosEditComponent,
-    ProyectosFormComponent
+    ProyectosFormComponent,
+    HomeComponent,
+    PerfilEditComponent,
+    PerfilFormComponent,
+    EncabezadoEditComponent
   ],
   imports: [
     BrowserModule,

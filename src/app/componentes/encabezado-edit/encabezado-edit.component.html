@@ -1,0 +1,87 @@
+<div>
+    <form
+     class="form-control"
+     [formGroup]="editarContForm"
+     (ngSubmit)="editarContacto(editarContForm.value)"
+     id="form-edit"
+    >
+    <h4>Editando redes sociales</h4>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-envelope"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="email"
+        formControlName="email"
+        >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-whatsapp"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="celular"
+        formControlName="celular"
+        >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-linkedin"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="linkedin_url"
+        formControlName="linkedin_url"
+        >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-instagram"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="instagram_url"
+        formControlName="instagram_url"
+        >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-facebook"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="facebook_url"
+        formControlName="facebook_url"
+        >
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-youtube"></i></span>
+        <input 
+        type="text" 
+        class="form-control" 
+        aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-default"
+        id="youtube_url"
+        formControlName="youtube_url"
+        >
+      </div>
+      <br>
+      <div
+      class="d-grid gap-2"
+      >
+      <button
+      type="submit"
+      class="btn btn-warning"
+      >
+        Guardar cambios
+      </button>
+      </div>
+</form>
+</div>
