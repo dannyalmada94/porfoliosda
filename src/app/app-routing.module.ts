@@ -80,7 +80,6 @@ const routes: Routes = [
     ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   { path: 'home', component: HomeComponent},
-  { path:'registro', component: RegistroComponent},
   { path: 'login', component: LoginComponent}
 ];
 

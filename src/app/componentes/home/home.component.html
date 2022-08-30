@@ -7,7 +7,7 @@
           {{persona.nombre+' '+persona.apellido}}
         </div>
         <div class="col-sm-7" id="redessoc" *ngFor="let contacto of contacto">
-          <a href="{{contacto.email}}" class="link-dark">
+          <a href="{{contacto.email}}" class="link-dark" target="_blank">
             <svg
             id="iconors" 
             xmlns="http://www.w3.org/2000/svg"
@@ -21,6 +21,7 @@
             </a>
             <a 
             href="{{contacto.celular}}"
+            target="_blank"
             class="link-dark"
             >
             <svg 
@@ -37,6 +38,7 @@
             </a>
             <a 
             href="{{contacto.facebook_url}}"
+            target="_blank"
             class="link-dark"
             >
             <svg 
@@ -55,6 +57,7 @@
             <a 
             href="{{contacto.instagram_url}}"
             class="link-dark"
+            target="_blank"
             >
             <svg 
             id="iconors" 
@@ -71,6 +74,7 @@
             <a 
             href="{{contacto.linkedin_url}}"
             class="link-dark"
+            target="_blank"
             >
             <svg
             id="iconors" 
@@ -87,6 +91,7 @@
             <a 
             href="{{contacto.youtube_url}}"
             class="link-dark"
+            target="_blank"
             >
             <svg 
             id="iconors" 

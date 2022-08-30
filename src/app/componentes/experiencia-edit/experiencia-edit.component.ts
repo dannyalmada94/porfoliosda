@@ -17,6 +17,8 @@ export class ExperienciaEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Recibo la experiencia a modificar desde el componente "experiencia-forms" y lo envío al método correspondiente en
+  //el servicio "databaseservice" para poder realizar la edición de la experiencia seleccionada
   editarExperiencia(datosExperiencia:any) {
     this.databaseservice.editarExperiencia(datosExperiencia).subscribe();
     this.router.navigate(['porfolio']);

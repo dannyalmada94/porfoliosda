@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //En este método hago la validación de los datos que se colocan en el formulario. Lo valido mediante
+  //método "login" del servicio "userService"
   onSubmit() {
     this.userService.login(this.formLogin.value)
     .then(response => {

@@ -17,7 +17,9 @@ export class ExperienciaFormsComponent implements OnInit {
   //Al tener que enviar un body con los mismos párametros que estan en el API para poder completar la solicitud
   //de manera exitosa, creo un nuevo formulario para poder ingresar los datos, con la particularidad de 
   //que ya están precargados los datos de la experiencia seleccionada y se muestran en el template, a excepción
-  //del campo "id_experiencia" que no se muestra, para que no sea modificado, pero es requerido en el URL
+  //del campo "id_experiencia" que no se muestra, para que no sea modificado, pero es requerido en el URL, esta información
+  //la envío mediante un evento para que la reciba el componente experiencia-edit y ese componente es el que
+  //tiene el método para que lo pueda recibir el método correspondiente del servicio
   editarExpForm = new FormGroup({
     'id_experiencia': new FormControl(''),
     'modalidad': new FormControl(''),

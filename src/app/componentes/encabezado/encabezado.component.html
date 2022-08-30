@@ -8,7 +8,11 @@
           {{persona.nombre+' '+persona.apellido}}
         </div>
         <div class="col-sm-5" id="redessoc" *ngFor="let contacto of contacto">
-          <a href="{{contacto.email}}" class="link-dark">
+          <a 
+          href="{{contacto.email}}" 
+          class="link-dark"
+          target="_blank"
+          >
           <svg
           id="iconors" 
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +24,10 @@
             <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
           </svg>
           </a>
-          <a href="{{contacto.celular}}" class="link-dark"
+          <a 
+          href="{{contacto.celular}}" 
+          class="link-dark"
+          target="_blank"
           >
           <svg 
           id="iconors"
@@ -37,6 +44,7 @@
           <a 
           href="{{contacto.facebook_url}}"
           class="link-dark"
+          target="_blank"
           >
           <svg 
           id="iconors" 
@@ -54,6 +62,7 @@
           <a 
           href="{{contacto.instagram_url}}"
           class="link-dark"
+          target="_blank"
           >
           <svg 
           id="iconors" 
@@ -70,6 +79,7 @@
           <a 
           href="{{contacto.linkedin_url}}"
           class="link-dark"
+          target="_blank"
           >
           <svg
           id="iconors" 
@@ -86,6 +96,7 @@
           <a 
           href="{{contacto.youtube_url}}"
           class="link-dark"
+          target="_blank"
           >
           <svg 
           id="iconors" 
